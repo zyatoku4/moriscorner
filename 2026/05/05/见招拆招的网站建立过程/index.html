@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#423326"><meta name="description" content="all kinds of stuff"><meta name="author" content="momo"><meta name="generator" content="Hexo 8.1.1"><title>见招拆招的网站建立过程 | mori's corner</title><link rel="icon" href="/moriscorner/images/bird_gachou.png"><link rel="stylesheet" href="/moriscorner/css/hsad-theme.css"><script src="/moriscorner/js/hsad-theme.js" defer></script></head><body class="view-inner view-post"><div class="reading-progress" aria-hidden="true"><span class="reading-progress__bar" data-reading-progress></span></div><div class="page-aura page-aura--one"></div><div class="page-aura page-aura--two"></div><div class="site-shell"><aside class="site-sidebar"><section class="sidebar sidebar--desktop"><div class="sidebar__backdrop" style="background-image:url(/moriscorner/images/IMG_0584.JPG)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/moriscorner/"><img class="sidebar__avatar" src="/moriscorner/images/IMG_9483.jpg" alt="momo"><div class="sidebar__identity"><h2 class="sidebar__title">mori's corner</h2><p class="sidebar__subtitle">why ur here?</p></div></a><p class="sidebar__description">momo just randomly stored some stuff here</p><nav class="sidebar__nav" aria-label="Primary"><a href="/moriscorner/">主页</a><a href="/moriscorner/archives/">归档</a><a href="/moriscorner/categories/">分类</a><a href="/moriscorner/tags/">标签</a><a href="/moriscorner/links/">友链</a><a href="/moriscorner/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/zyatoku4" target="_blank" rel="noopener">GitHub</a><a href="mailto:524865612@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></aside><div class="mobile-topbar"><button class="mobile-topbar__toggle js-drawer-toggle" type="button" aria-label="Open navigation"><span></span><span></span><span></span></button><a class="mobile-topbar__title" href="/moriscorner/">mori's corner</a><a class="mobile-topbar__avatar" href="/moriscorner/"><img src="/moriscorner/images/IMG_9483.jpg" alt="momo"></a></div><div class="mobile-drawer" data-drawer aria-hidden="true"><div class="mobile-drawer__panel"><section class="sidebar sidebar--mobile"><div class="sidebar__backdrop" style="background-image:url(/moriscorner/images/IMG_0584.JPG)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/moriscorner/"><img class="sidebar__avatar" src="/moriscorner/images/IMG_9483.jpg" alt="momo"><div class="sidebar__identity"><h2 class="sidebar__title">mori's corner</h2><p class="sidebar__subtitle">why ur here?</p></div></a><p class="sidebar__description">momo just randomly stored some stuff here</p><nav class="sidebar__nav" aria-label="Primary"><a href="/moriscorner/">主页</a><a href="/moriscorner/archives/">归档</a><a href="/moriscorner/categories/">分类</a><a href="/moriscorner/tags/">标签</a><a href="/moriscorner/links/">友链</a><a href="/moriscorner/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/zyatoku4" target="_blank" rel="noopener">GitHub</a><a href="mailto:524865612@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section></div></div><div class="mobile-backdrop js-drawer-close"></div><main class="site-main"><div class="article-layout article-layout--plain"><article class="article"><header class="article__header"><div class="article__eyebrow"><a href="/moriscorner/categories/%E4%BB%A3%E7%A0%81/">代码</a></div><h1 class="article__title">见招拆招的网站建立过程</h1><div class="article__meta"><time datetime="2026-05-04T17:30:24.000Z">2026-05-05</time><span class="article__divider">/</span><span>更新于 2026-05-05</span></div><div class="article__tags"><a class="article__tag" href="/moriscorner/tags/corner/">corner</a></div></header><div class="article__content"><p>作网站本身的大事记用。<br>由于还没有研究完md语法所以先把备忘录里的东西直接贴过来了，之后学会新知识了再逐一修改。<br>提示语工程师来的，想一出是一出地干了，所以说见招拆招…很混乱是必然的，慢慢学习吧。</p>
+<p>选定hexo平台</p>
+<ul>
+<li>部署方式：github pages，免费</li>
+<li>写文章用markdown（？）<br>技术基础：node,js+npm</li>
+</ul>
+<p>开始：<br><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a><br>按照引导安装git、node.js（版本控制工具、运行软件）<br>完成后，用npm（包管理器）安装hexo<br>【遇到困难：直接安装pkg格式的git 安装hexo失败 node没有pkg文件】<br>转为下载macports 安装两者 完成后在terminal输入</p>
+<ul>
+<li>01 更新 MacPorts<br>先更新 MacPorts 的软件包索引，确保获取最新版本的 Git。<br>在终端输入：</li>
+<li>sudo port selfupdate</li>
+<li>等待更新完成<br>02 搜索 Git 包<br>确认 MacPorts 中可用的 Git 版本。<br>在终端输入：</li>
+<li>port search git</li>
+<li>你会看到多个相关包，例如 git、git-core 等<br>03 安装 Git<br>主要步骤<br>安装 Git 主程序。<br>在终端输入：</li>
+<li>sudo port install git</li>
+<li>如果需要完整功能，可以安装 git-core<br>04 验证安装<br>确认 Git 已正确安装并可用。<br>在终端输入：</li>
+<li>git –version</li>
+<li>输出类似 git version 2.x.x 表示安装成功</li>
+</ul>
+<p>分别输入git -v、node -v、npm -v，如果看到版本号，说明三者都安装成功，可以下一步<br>开始安装hexo<br>【遇到困难：EACCES错误】<br><em>sudo npm install -g hexo-cli</em><br><em>mac登录密码</em><br>此时应该已经可以安装hexo，但重复解决了一遍：<br>01 安装 Node 版本管理器 (nvm)<br>推荐方案<br>nvm 可以让你在用户目录下安装 Node.js 和 npm，避免权限错误。<br>在终端执行：</p>
+<ul>
+<li>curl -o- <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh">https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh</a> | bash</li>
+<li>关闭并重新打开终端</li>
+<li>输入 nvm –version 验证安装<br>02 用 nvm 安装 Node.js 和 npm<br>通过 nvm 安装 Node.js，npm 会自动一起安装。<br>在终端执行：</li>
+<li>nvm install –lts 安装最新 LTS 版本</li>
+<li>node -v 和 npm -v 验证版本<br>03 重新安装 Hexo CLI<br>在用户目录下安装 Hexo CLI，不会再遇到 EACCES 错误。<br>在终端执行：</li>
+<li>npm install -g hexo-cli</li>
+<li>安装完成后输入 hexo -v 验证是否成功</li>
+</ul>
+<p>安装：<br><folder>处命名博客根目录文件夹，如“myblog”</p>
+<p>在myblog的_config.yml里修改配置：<br>有影响的几项：title subtitle description keywords author language timezone，按需求填写<br>此时写<em>hexo server</em>，打开<a href="http://localhost:4000，可以对博客界面进行本地预览">http://localhost:4000，可以对博客界面进行本地预览</a></p>
+<p>下一步：部署github pages<br>包含两步：确定自己的网址、开启github pages<br>用 GitHub Pages 的意思是：你把博客文件放到 GitHub（一个代码托管平台），它会帮你免费生成一个网站地址，这样别人就能访问你的博客了。<br>在 GitHub Pages 上，你的博客网址其实就是 仓库名和用户名决定的。<br>【遇到困难：没有仓库】</p>
+<ol>
+<li>创建仓库<br>登录 GitHub，点击右上角的 “+” → New repository”。<br>在 Repository name 输入框里填名字：</li>
+</ol>
+<ul>
+<li>如果你想要网址是 https:&#x2F;&#x2F;你的用户名.github.io，仓库名必须写成 你的用户名.github.io。可能比较方便，但是会导致之后不可以更改网址。</li>
+<li>如果你写成其他名字，比如 blog，那网址就是 https:&#x2F;&#x2F;你的用户名.github.io&#x2F;blog。以后可以多次更改网址。<br>此处需要注意两种的区别！<br>🟢 第一种：仓库名是 username.github.io</li>
+<li>网址固定：就是 <a target="_blank" rel="noopener" href="https://username.github.io./">https://username.github.io。</a></li>
+<li>如果你删掉仓库：这个网址就会失效，访问时显示 404。即使你在 _config.yml 里改了 url，也没用，因为 GitHub Pages 没有仓库来生成网站。</li>
+<li>解决办法：重新建一个同名仓库，再部署文件，网址就会恢复。<br>🟡 第二种：仓库名是其他，比如 blog</li>
+<li>网址规则：<a target="_blank" rel="noopener" href="https://username.github.io/blog%E3%80%82">https://username.github.io/blog。</a></li>
+<li>如果你改仓库名：比如把 blog 改成 notes，那网址就会变成： <a target="_blank" rel="noopener" href="https://username.github.io/notes">https://username.github.io/notes</a></li>
+<li>已有内容会不会丢？ 不会。仓库里的文件还在，只是网址路径变了。你需要在 _config.yml 里更新 url 字段，让 Hexo 生成的链接和新网址一致。<br>📌 总结</li>
+<li>第一种（主页仓库）：删库 &#x3D; 网址消失，必须重新建。</li>
+<li>第二种（子仓库）：改名 &#x3D; 网址路径变，但内容还在，只要更新 _config.yml 就能继续访问。<br>👉 所以区别在于：</li>
+<li>第一种网址更“固定”，删库就没了。</li>
+<li>第二种网址更“灵活”，改名后内容还在，只是路径不同。</li>
+</ul>
+<p>选好哪一种，再进行命名。<br>命名后，选择 Public（公开），这样别人才能访问。<br>不需要勾选 “Add a README”，直接点击 Create repository。<br>2. 确认github pages网址<br>￼<br>把网址填在myblog的_config.yml的url那一栏。<br>如选择第二种，建子仓库，就把仓库名填在root那一栏。</p>
+<p>第二步：打开github pages<br>在myblog的_config.yml里找到如下部分，填写type、repo、branch（如选择第二种，就是写gh-pages）<br>【# Deployment<br>#Docs:<a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment">https://hexo.io/docs/one-command-deployment</a><br>deploy:<br>type: git’repo:<a target="_blank" rel="noopener" href="https://github.com/zyatoku4/moriscorner.git">https://github.com/zyatoku4/moriscorner.git</a><br>branch: gh.pages】<br>在github的我的-repositories-你建立的仓库-settings-pages-Build and deployment<br>选deploy from a branch，在下面的branch选gh-pages，&#x2F;(root)，点save<br>在本地播客目录运行：<br><em>npm install hexo-deployer-git –save</em><br><em>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</em><br>会在 public&#x2F; 文件夹里生成完整的网页文件，把 public&#x2F; 文件推送到 GitHub 仓库。<br>【遇到困难：没有成功deploy，显示Username for ‘<a target="_blank" rel="noopener" href="https://github.com':？】">https://github.com&#39;:？】</a><br>此时输入用户名，然后需要回答token<br>这个token要到 GitHub → Settings → Developer settings → Personal access tokens 里生成一个。</p>
+<ul>
+<li>选择 repo 权限。<br>在终端提示输入密码时，把这个 Token 粘贴进去。<br>这样 Hexo 才能把文件推送到仓库。</li>
+</ul>
+<p>每有一个编辑配置的行为，就写<em>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</em><br>有一点慢，稍等一会，此时网址应该已经可以打开！<br>等待的时候可以先写<strong>hexo s</strong>进行本地预览。</p>
+<p>（第一天，甚至不知道什么叫在博客目录下运行文件&#x3D; &#x3D;）</p>
+<p>下一步，装主题<br>在<a target="_blank" rel="noopener" href="https://hexo.io/themesl/">https://hexo.io/themesl/</a> 找到一个喜欢的主题，根据他的readme在终端输入克隆代码，按指引进行<br>在根目录config里找到theme，改为下载到的主题文件夹的名字<br>【遇到问题：deploy后网站把源代码当成纯文本直接显示出来了】<br><em>npm install hexo-renderer-pug –save</em><br><em>npm install hexo-renderer-stylus –save</em><br>deploy，仍然不行<br><em>npm install hexo-renderer-pug –save –legacy-peer-deps</em><br>反复几次可以显示了，但是是纯http界面。反复检查了几遍上面的路径，最后发现是css引用路径错误。<br>进入主题文件夹-layout-partical-名字里有base的pug文件<br>找到引用 CSS 的那一行，通常长这样:<br>link(rel&#x3D;’stylesheet’,href&#x3D;’&#x2F;style&#x2F;index.css’)<br>把它修改为:<br>link(rel&#x3D;’stylesheet’,href&#x3D;url for(‘&#x2F;style&#x2F;index.css’))<br>按照指示找到了一行href&#x3D;’&#x2F;style&#x2F;index.css’，把它改成了link(href&#x3D;url_for(‘&#x2F;style&#x2F;index.css’), rel&#x3D;’stylesheet’)<br>此时再次deploy，可以了。</p>
+<p>下一步：换头像</p>
+<ol>
+<li>准备图片文件<br>首先，你需要把你的头像图片放到主题的资源文件夹中，这样 Hexo 才能找到它。</li>
+</ol>
+<ul>
+<li>存放位置：进入你的博客目录 myblog&#x2F;themes&#x2F;instapaper&#x2F;source&#x2F;images&#x2F;。</li>
+<li>放入图片：把你喜欢的图片（比如叫 my-head.jpg）拷贝到这个 images 文件夹里。</li>
+</ul>
+<ol start="2">
+<li>修改配置文件 (如你截图所示)<br>在你截图中显示的 _config.yml 文件第一行进行修改：</li>
+</ol>
+<ul>
+<li>修改前：avatar: &#x2F;images&#x2F;avatar.jpg</li>
+<li>修改后：avatar: &#x2F;images&#x2F;my-head.jpg（把名字换成你刚放进去的图片名）<br>同理可以换背景图。</li>
+</ul>
+<p>下一步：换favicon<br>把要的图标文件放入博客的 themes&#x2F;instapaper&#x2F;source&#x2F;images&#x2F; 文件夹内。<br>打开你刚才一直在修改的主题 _config.yml 文件，在文件中找到包含 favicon 或 favicon.ico 的行，填图标的文件名。<br>【遇到问题：没找到包含 favicon 或 favicon.ico 的行】<br>在主题的base.pug文件里没写favicon。手动添加。在title&#x3D; currentTitle 的下方写：<br>link(rel&#x3D;’icon’, href&#x3D;url_for(‘&#x2F;images&#x2F;文件名’))<br>解决。<br>下一步：创建“关于”界面<br>终端写：hexo new page about<br>这会在 source&#x2F;about&#x2F; 下生成一个 index.md 文件。<br>打开 source&#x2F;about&#x2F;index.md，确保它看起来像这样：<br>——<br>title: 关于<br>date: 2024-05-03 12:00:00<br>——<br>（这里是关于页面的内容）</p>
+<p>注意： 必须在 — 分割线下方写内容，网页才会显示。</p>
+<p>下一步：学发帖删帖<br>发帖在hexo的文档里有教，删帖就是找到那个md文件直接手动扔垃圾桶。<br>临时隐藏而非删除：如果你只是暂时不想让某篇文章显示，但以后可能还要发，不需要直接删除文件。你可以在文章顶部的配置（Front-matter）中添加一行 published: false。这样 Hexo 在生成网站时会自动跳过它。<br>Md文件顶部有几行被 — 包裹的内容，叫 Front-matter</p>
+<ul>
+<li>功能介绍：<ul>
+<li>tags (标签)：给文章贴标签，方便读者通过侧边栏点击标签查看同类内容。</li>
+<li>categories (分类)：文章的归属，通常是层级化的（比如：学习 &#x2F; 会计）。</li>
+<li>sticky (置顶)：如果你想让这篇文章永远排在第一位，可以加一行 sticky: 1。</li>
+<li>excerpt（摘要）：精准控制首页显示什么，和正文内容互相独立。<br>在第二个 — 下方开始写你的内容。<br>还有一些 Hexo 特有的功能：</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>设置首页摘要 (Read More)<br>如果你不想让整篇长文章都堆在首页，可以在你想截断的地方输入：</li>
+</ol>
+<p>（这是文章的开头介绍…）<br>!– more –<br>（这里是隐藏在“阅读更多”后面的详细内容。）</p>
+<p>!– more – 之前的文字会作为首页预览，之后的文字只有点进文章标题才能看到。<br>2. 插入图片<br>将图片放入 source&#x2F;images&#x2F; 文件夹，然后在文章中引用： <img src="/moriscorner/images/%E6%96%87%E4%BB%B6%E5%90%8D.png" alt="图片描述"><br>3. 引用与代码块<br>教别人知识时，这两个功能非常好用：</p>
+<ul>
+<li>引用：使用 &gt; 标记重要结论。</li>
+<li>代码&#x2F;公式：如果是会计分录，可以用代码块包裹，看起来更整齐。<br>【遇到问题：写了&lt;!– more —&gt;，但没有显示预览】<br>检查大半天，发现预览没出来，是因为第一句话写得太短了，触发了主题预设有的“垃圾过滤”机制。去掉主题的过滤机制后成功。</li>
+</ul>
+<p>下一步，建立分类页<br>和about页类似，但是要在front-matter里加上：<br>type: “categories”<br>layout: “categories”</p>
+<p>以上基本覆盖网页基础设置、主题基础设置，同理可以自定义大部分主题内容。随后改了每个页面留有的文字，建立了标签页。<br>建立友链页时，需要在根目录-source-links里index的front-matter里写：<br>links:</p>
+<ul>
+<li>name: 名字<br>url: 网址<br>avatar: 头像<br>desc: 签名<br>这样算是添加了一个朋友。<br>【遇到问题：友链没显示】<br>在主题的layout文件夹里的links.pug文件里要求的属性名和我在index里写的对不上。</li>
+</ul>
+<ul>
+<li>你的 yml 里写的是 link:，但代码里要求的是 url:。</li>
+<li>你的 yml 里写的是 descr:，但代码里要求的是 desc:。<br>两个需要一样。修改我的index。成功。</li>
+</ul>
+</div></article></div><nav class="post-nav"><a class="post-nav__item post-nav__item--next" href="/moriscorner/2026/05/03/hii/"><span class="post-nav__label">下一篇</span><strong>hii</strong></a></nav></main><footer class="site-footer"><p class="site-footer__text">to be continue...</p></footer></div></body></html>
