@@ -2,36 +2,82 @@
   left: auto !important;
   right: 15px !important;
   bottom: 15px !important;
-  width: 100% !important;
+  width: 400px !important;
   z-index: 9999 !important;
-}
-.aplayer.aplayer-fixed .aplayer-body {
-  left: auto !important;
-  right: 0 !important;
-  transform: none !important;
 }
 .aplayer.aplayer-fixed.aplayer-narrow {
   width: 66px !important;
 }
-.aplayer.aplayer-fixed .aplayer-list {
-  margin-bottom: 65px !important;
+.aplayer.aplayer-fixed .aplayer-body {
+  left: auto !important;
+  right: 0 !important;
+  width: 100% !important;
+  transform: none !important;
+  height: 66px !important; /* 强制主体高度固定 */
+}
+
+/* 核心修正：强制图标按钮下移 */
+.aplayer.aplayer-fixed .aplayer-info .aplayer-controller .aplayer-icons {
+  display: flex !important;
+  align-items: center !important;
+  height: 26px !important; /* 限制图标区域高度 */
+  position: absolute !important;
+  bottom: 7px !important; /* 强制固定在底部的距离 */
+  right: 15px !important;
+}
+
+/* 针对具体每一个图标进行位置修正 */
+.aplayer.aplayer-fixed .aplayer-info .aplayer-controller .aplayer-icons .aplayer-icon {
+  top: 0 !important; /* 撤销可能的顶部偏移 */
+  margin: 0 2px !important;
+}
+
+/* 歌名和进度条位置微调，防止重叠 */
+.aplayer.aplayer-fixed .aplayer-info .aplayer-music {
+  margin: 0 120px 10px 10px !important;
+}
+.aplayer.aplayer-fixed .aplayer-info .aplayer-bar-wrap {
+  margin: 0 110px 0 10px !important;
 }
 </style></div><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script></aside><div class="mobile-topbar"><button class="mobile-topbar__toggle js-drawer-toggle" type="button" aria-label="Open navigation"><span></span><span></span><span></span></button><a class="mobile-topbar__title" href="/moriscorner/">mori's corner</a><a class="mobile-topbar__avatar" href="/moriscorner/"><img src="/moriscorner/images/IMG_9483.jpg" alt="momo"></a></div><div class="mobile-drawer" data-drawer aria-hidden="true"><div class="mobile-drawer__panel"><section class="sidebar sidebar--mobile"><div class="sidebar__backdrop" style="background-image:url(/moriscorner/images/IMG_0584.JPG)"></div><div class="sidebar__overlay"></div><div class="sidebar__content"><a class="sidebar__brand" href="/moriscorner/"><img class="sidebar__avatar" src="/moriscorner/images/IMG_9483.jpg" alt="momo"><div class="sidebar__identity"><h2 class="sidebar__title">mori's corner</h2><p class="sidebar__subtitle">why ur here?</p></div></a><p class="sidebar__description">momo just randomly stored some stuff here</p><nav class="sidebar__nav" aria-label="Primary"><a href="/moriscorner/">主页</a><a href="/moriscorner/archives/">归档</a><a class="is-active" href="/moriscorner/categories/">分类</a><a href="/moriscorner/tags/">标签</a><a href="/moriscorner/links/">友链</a><a href="/moriscorner/about/">关于</a></nav><div class="sidebar__social"><a href="https://github.com/zyatoku4" target="_blank" rel="noopener">GitHub</a><a href="mailto:524865612@qq.com" target="_blank" rel="noopener">E-Mail</a></div></div></section><div id="my-aplayer"><meting-js server="netease" type="playlist" id="17949644047" api="https://api.injahow.cn/meting/?server=:server&amp;type=:type&amp;id=:id&amp;auth=:auth&amp;referrer=:referrer&amp;m_type=:m_type" fixed="true" mini="true" list-folded="true" theme="#2980b9" order="random"></meting-js><style>.aplayer.aplayer-fixed {
   left: auto !important;
   right: 15px !important;
   bottom: 15px !important;
-  width: 100% !important;
+  width: 400px !important;
   z-index: 9999 !important;
-}
-.aplayer.aplayer-fixed .aplayer-body {
-  left: auto !important;
-  right: 0 !important;
-  transform: none !important;
 }
 .aplayer.aplayer-fixed.aplayer-narrow {
   width: 66px !important;
 }
-.aplayer.aplayer-fixed .aplayer-list {
-  margin-bottom: 65px !important;
+.aplayer.aplayer-fixed .aplayer-body {
+  left: auto !important;
+  right: 0 !important;
+  width: 100% !important;
+  transform: none !important;
+  height: 66px !important; /* 强制主体高度固定 */
+}
+
+/* 核心修正：强制图标按钮下移 */
+.aplayer.aplayer-fixed .aplayer-info .aplayer-controller .aplayer-icons {
+  display: flex !important;
+  align-items: center !important;
+  height: 26px !important; /* 限制图标区域高度 */
+  position: absolute !important;
+  bottom: 7px !important; /* 强制固定在底部的距离 */
+  right: 15px !important;
+}
+
+/* 针对具体每一个图标进行位置修正 */
+.aplayer.aplayer-fixed .aplayer-info .aplayer-controller .aplayer-icons .aplayer-icon {
+  top: 0 !important; /* 撤销可能的顶部偏移 */
+  margin: 0 2px !important;
+}
+
+/* 歌名和进度条位置微调，防止重叠 */
+.aplayer.aplayer-fixed .aplayer-info .aplayer-music {
+  margin: 0 120px 10px 10px !important;
+}
+.aplayer.aplayer-fixed .aplayer-info .aplayer-bar-wrap {
+  margin: 0 110px 0 10px !important;
 }
 </style></div><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script></div></div><div class="mobile-backdrop js-drawer-close"></div><main class="site-main"><section class="page-intro"><p class="page-intro__kicker">Category</p><h1 class="page-intro__title">really random stuff</h1><p class="page-intro__description">缓慢长出文件中</p></section><div class="archive-list"><section class="archive-group"><h2 class="archive-group__year">2026</h2><div class="archive-group__items"><a class="archive-entry" href="/moriscorner/2026/05/03/hii/"><time class="archive-entry__date" datetime="2026-05-03T15:38:04.000Z">05-03</time><span class="archive-entry__title">hii</span><span class="archive-entry__meta">really random stuff</span></a></div></section></div></main><footer class="site-footer"><p class="site-footer__text">to be continue...</p></footer></div></body></html>
